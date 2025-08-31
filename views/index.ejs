@@ -1,0 +1,20 @@
+<% layout("/layouts/boilerplate") %>
+  <!--yaha vo ejs ki help se vo sara show hoga jo humne boilerplate file mein diya hai  -->
+
+<div class="mt-4">
+  <h1>All Listing</h1>
+      <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 mt-3"> 
+        <% for(let listing2 of allListings1 ) { %>
+        <div class="card col" style="width: 20rem">
+          <a href="/listings/<%= listing2._id %>"><img src="<%= listing2.image %>" class="card-img" alt="listing_image" style="height: 20rem;"/></a>
+          <div class="card-body">
+            <p class="card-text">
+              <b><%= listing2.title %></b> <br/>
+              ₹ <%= listing2.price.toLocaleString("en-IN") %> / night 
+            </p>
+          </div>
+        </div>
+        <% } %>
+        <b></b>
+      </div>
+</div>

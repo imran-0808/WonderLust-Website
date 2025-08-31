@@ -1,0 +1,48 @@
+<!-- jaise hee kisi post ki image par click karenge to id ke according ye open ho jayega -->
+<% layout("/layouts/boilerplate") %>
+
+  <div class="col-8 offset-2 mt-3">
+    <h3>Listing Details</h3>
+    <ul>
+      <div class="card mt-3" style="width: 18rem;">
+        <img src="<%= listingId.image %>" class="card-img-top" alt="listing_image" style="height: 20rem;">
+        <div class="card-body">
+          <li>
+            <h5 class="card-title mt-2">
+              <%= listingId.title %>
+            </h5>
+          </li>
+          <li>
+            <p class="card-text">
+              <%= listingId.description %>
+            </p>
+          </li>
+          <li>
+            <p class="card-text mt-2">
+              <%= listingId.location %>
+            </p>
+          </li>
+          <li>
+            <p class="card-text mt-2">
+              <%= listingId.country %>
+            </p>
+          </li>
+          <li>
+            <p class="card-text mt-2">
+              ₹ <%= listingId.price.toLocaleString("en-IN") %><!-- .toLocaleString used for number comma(,) -->
+            </p>
+          </li>
+          <div class="row mt-4">
+            <div class="col-4">
+              <a href="/listings/<%=listingId._id%>/edit">
+                <button class="btn btn-dark show-edit-btn">edit</button></a>
+            </div>
+            <div class="col-8">
+              <form method="POST" action="/listings/<%= listingId._id%>?_method=DELETE">
+                <button class="btn btn-dark btn-delete show-delete-btn">Delete this listing</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
