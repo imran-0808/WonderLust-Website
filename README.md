@@ -53,10 +53,10 @@ The application focuses on **secure authentication, authorization, and clean bac
 
 Wanderlust/
 │
-├── init/ # MongoDB connection
-├── models/ # MongoDB schemas
-├── public/ # CSS & static assets
-├── routes/ # Express routes
+├── init/ # MongoDB connection                                                                               
+├── models/ # MongoDB schemas       
+├── public/ # CSS & static assets                                                                                                                                                                              
+├── routes/ # Express routes  
 ├── views/ # EJS templates (HTML rendering)
 ├── app.js
 ├── ExpressError.js
