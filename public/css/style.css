@@ -2,6 +2,7 @@ body{
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    margin: 0;
 }
 .container {
     flex: 1;
@@ -48,8 +49,13 @@ body{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: space-evenly;
-} 
+    align-items: center;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;       
+    z-index: 10;        /* optional, overlapping avoid karega */
+}
 
 /* Cards file(index.ejs) */
 .card {

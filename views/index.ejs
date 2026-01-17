@@ -1,4 +1,4 @@
-<% layout("/layouts/boilerplate") %>
+<% layout("/layouts/boilerplate") %> 
   <!--yaha vo ejs ki help se vo sara show hoga jo humne boilerplate file mein diya hai  -->
 
 <div class="mt-4">
@@ -10,11 +10,11 @@
           <div class="card-body">
             <p class="card-text">
               <b><%= listing2.title %></b> <br/>
-              ₹ <%= listing2.price.toLocaleString("en-IN") %> / night 
+              ₹ <%= listing2.price ? listing2.price.toLocaleString("en-IN") : "0" %> / night
             </p>
           </div>
         </div>
         <% } %>
         <b></b>
-      </div>
+      </div> 
 </div>

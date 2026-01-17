@@ -1,17 +1,13 @@
 <!-- jaise hee kisi post ki image par click karenge to id ke according ye open ho jayega -->
-<% layout("/layouts/boilerplate") %>
-
+<% layout("/layouts/boilerplate") %> 
+   
   <div class="col-8 offset-2 mt-3">
-    <h3>Listing Details</h3>
+    <h3><%= listingId.title %></h3>
     <ul>
       <div class="card mt-3" style="width: 18rem;">
         <img src="<%= listingId.image %>" class="card-img-top" alt="listing_image" style="height: 20rem;">
         <div class="card-body">
-          <li>
-            <h5 class="card-title mt-2">
-              <%= listingId.title %>
-            </h5>
-          </li>
+          <br>
           <li>
             <p class="card-text">
               <%= listingId.description %>
@@ -33,10 +29,12 @@
             </p>
           </li>
           <div class="row mt-4">
+            <!-- Edit listing -->
             <div class="col-4">
               <a href="/listings/<%=listingId._id%>/edit">
                 <button class="btn btn-dark show-edit-btn">edit</button></a>
             </div>
+            <!-- Delete listing -->
             <div class="col-8">
               <form method="POST" action="/listings/<%= listingId._id%>?_method=DELETE">
                 <button class="btn btn-dark btn-delete show-delete-btn">Delete this listing</button>
@@ -44,5 +42,51 @@
             </div>
           </div>
         </div>
-      </div>
+      </div>    <br> <hr> <br>
+      <!--Create Review for listing -->
+      <div class="col-6"> 
+       <h4>Leave a Review</h4>
+        <form method="POST" action="/listings/<%= listingId._id %>/reviews">
+          <div class="form-group">
+            <label for="comment"><b>Comment</b></label>
+            <textarea class="form-control" type="text" name="review[comment]" placeholder="write a reviews" required></textarea>
+          </div>
+          <div class="form-group mt-2">
+            <label for="rating"><b>Rating</b></label>
+            <select class="form-control" name="review[rating]" required>
+              <option value="">Select a rating</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+          </div>             
+          <button type="submit" class="btn btn-primary mt-1">Submit Review</button>
+        </form>
+      </div>     <br>   <hr>  
+
+      <!-- Display Reviews for listing -->
+       <h4 class="offset-">Check Reviews</h4>
+      <div class="row row-cols-lg-2 row-cols-md-2 row-cols-sm-1 mt-4">
+        <% if (listingId.reviews.length === 0) { %>
+          <p>No reviews yet. Be the first to review!</p>
+        <% } else { %>
+          <% listingId.reviews.forEach((review) => { %>
+            <div class="card mb-3">
+              <div class="card-body">
+                <h5 class="card-title">Rating: <%= review.rating %> ⭐</h5>
+                <p class="card-text"><%= review.comment %></p>
+                <p class="card-text"><%= review.createdAt.toLocaleString() %></p>
+              </div>
+
+              <form method="POST" action="/listings/<%= review._id %>/<%= listingId._id %>/?_method=DELETE">
+                <button>Delete Review</button>
+              </form>
+
+            </div>
+          <% }) %>
+        <% } %>
   </div>
+
+</div>

@@ -1,0 +1,73 @@
+<% layout("/layouts/boilerplate") %>
+
+<div class="row">
+  <div class="col-8 offset-2">
+    <body>
+      <br />
+      <h3>Create New List</h3>
+      <form method="POST" action="/listings">
+        <div class="mb-3">
+          <label for="title" class="form-lable">Title</label>
+          <!-- yaha jo bhi variable hain unhe object ki key bna diya like title, description, image, etc -->
+          <input
+            name="listing0[title]"
+            placeholder="enter title"
+            type="text"
+            class="form-control"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="description" class="form-lable">Description</label>
+          <textarea
+            name="listing0[description]"
+            placeholder="enter description"
+            type="text"
+            class="form-control"
+          ></textarea>
+        </div>
+        <div class="mb-3">
+          <label for="image" class="form-lable">Image</label>
+          <input
+            name="listing0[image]"
+            placeholder="enter image link"
+            type="text"
+            class="form-control"
+          />
+        </div>
+        <div class="row">
+          <div class="mb-3 col-md-4">
+            <label for="price" class="form-lable">Price</label>
+            <input
+              name="listing0[price]"
+              placeholder="enter price"
+              type="number"
+              class="form-control"
+            />
+          </div>
+          <div class="mb-3 col-md-8">
+            <label for="country" class="form-lable">Country</label>
+            <input
+              name="listing0[country]"
+              placeholder="enter your country"
+              type="text"
+              class="form-control"
+            />
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="location" class="form-lable">Location</label>
+          <input
+            name="listing0[location]"
+            placeholder="enter image location"
+            type="text"
+            class="form-control"
+          />
+        </div>
+        <br />
+        <button class="btn btn-dark add-btn">Add</button>
+        <br /><br />
+      </form>
+    </body>
+    <script src="/public/js/script.js"></script> <!--yeh humne public folder mein js file banayi hai jisme hum apna javascript code likhenge -->
+  </div>
+</div>

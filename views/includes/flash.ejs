@@ -1,0 +1,15 @@
+<!-- Flash Messages for success -->
+<% if(successMsg && successMsg.length ) { %>
+<div class="alert alert-success alert-dismissible fade show col-6 offset-3" role="alert">
+    <%= successMsg %><!-- this is success message which will be flashed after creating a new listing -->    
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+<% } %>
+
+<!-- Flash Messages for error -->
+<% if(errorMsg && errorMsg.length) { %>
+    <div class="alert alert-danger alert-dismissible fade show col-6 offset-3" role="alert">
+    <%= errorMsg %><!-- this is success message which will be flashed after creating a new listing -->
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+<% } %>
