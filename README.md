@@ -56,13 +56,13 @@ Wanderlust/
 ├── init/ # MongoDB connection                                                                               
 ├── models/ # MongoDB schemas       
 ├── public/ # CSS & static assets                                                                                                                                                                              
-├── routes/ # Express routes  
-├── views/ # EJS templates (HTML rendering)
-├── app.js
-├── ExpressError.js
-├── middleware.js # Auth & role-based checks
-├── package.json
-└── README.md
+├── routes/ # Express routes                                                                                                                                                                                    
+├── views/ # EJS templates (HTML rendering)                                                                                                                                                                      
+├── app.js                                                                                                                                                                                                       
+├── ExpressError.js                                                                                                                                                                                           
+├── middleware.js # Auth & role-based checks                                                                                                                                                                   
+├── package.json                                                                                                                                                                                           
+└── README.md                                                                                                                                                                                    
 
 
 ---
