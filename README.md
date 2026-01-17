@@ -80,33 +80,33 @@ Wanderlust/
 
  ## 📸 Screenshots
 
-**All Listings**
+### All Listings
 
-[!all_listings](./screenshots/all_listings.png)
+![all_listings](./screenshots/all_listings.png)
 
-**Registration for new user**
+### Registration for new user
 
-[!signup](./screenshots/signup_page.png)
+![signup](./screenshots/signup_page.png)
  
-**Login**
+### Login
 
-[!login](./screenshots/login_page.png)
+![login](./screenshots/login_page.png)
 
-**Listing Details**
+### Listing Details
 
-[!listing_details](./screenshots/listing_details.png)
+![listing_details](./screenshots/listing_details.png)
 
-**Create new Listing**
+### Create new Listing
 
-[!create_listing](./screenshots/create_new_listing.png)
+![create_listing](./screenshots/create_new_listing.png)
 
-**Edit listing**
+### Edit listing
 
-[!edit_listing](./screenshots/edit_listing.png)
+![edit_listing](./screenshots/edit_listing.png)
 
-**Review**
+### Review
 
-[!Review](./screenshots/review.png)
+![Review](./screenshots/review.png)
 
 ---
 
